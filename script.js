@@ -1,7 +1,7 @@
-const apiKey = "";
+const apiKey = "fc151c36de4c8be5f5c6642b1f01933e";
 // stores the api key needed to  autheenticate requests to the API
 
-const apiUrl = "";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 // sets the base url for the weather map api account endpoint
 
 const locationInput = document.getElementById("locationInput");
@@ -33,7 +33,7 @@ function fetchweather(location) {
     fetch(url)
        .then((response) => {
         if (!response.ok) {
-            throw new Error("Weather dataa not available for the entered location");
+            throw new Error("Weather data not available for the entered location");
         }
         return response.json();
 })
