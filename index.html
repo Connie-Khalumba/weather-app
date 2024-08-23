@@ -5,39 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Weather App</h1>
-        <input type="text" id="locationInput" placeholder="Enter city name">
-        <button id="searchButton">Search</button>
-        <div class="weather-info">
-            <h2 id="location"></h2>
-            <p id="temperature"></p>
-            <div class="details">
-                <img src="./assets/weather.png" alt="">
-                <div class="description" id="description">
-                    <p class="value" id="humidity">%</p>
-                    <p>Humidity</p>
+        <div class="input-container">
+            <input class="search-input" id="locationInput" placeholder="Enter city name">
+            <button class="search-button" id="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="weather-container">
+            <div id="cityWeather" class="city-weather hidden">
+                <img class="icon" id="icon" alt="">
+                <h1 class="temperature" id="temperature"></h1>
+                <h2 class="city" id="city"></h2>
+                <div class="details">
+                    <div class="detail">
+                        <img src="./assets/weather.png">
+                        <div class="description" id="description">
+                            <p class="value" id="humidity">%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <img src="./assets/windy.png">
+                        <div class="description" id="description">
+                            <p class="value" id="wind">Km/h</p>
+                            <p>windy</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="details">
-            <img src="./assets/windy.png" alt="">
-            <div class="description" id="description">
-                <p class="value" id="wind">Km/h</p>
-                <p>windy</p>
+            <div id="noCityFound" class="no-city-found hidden">
+                <img src="./assets/no-location.webp" alt="">
+                <p>Oops! Location not Found!</p>
             </div>
-        </div>
-        <div id="noCityFound" class="no-city-found hidden">
-            <img src="./assets/no-location.webp" alt="">
-            <p>Oops! Location not Found!</p>
+
+
+
+
+
         </div>
     </div>
-    </div>
+
+
 
     <script src="script.js"></script>
 </body>
