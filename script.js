@@ -10,7 +10,7 @@ const locationInput = document.getElementById("locationInput");
 const searchButton = document.getElementById("searchButton");
 //selects HTML input element where the user can select the search
 
-const locationElement = document.getElementById("location");
+const locationElement = document.getElementById("city");
 //selects HTML input element where the location will be displayed
 
 const temperatureElement = document.getElementById("temperature");
